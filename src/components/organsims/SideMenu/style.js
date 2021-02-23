@@ -1,21 +1,20 @@
 import styled from 'styled-components/macro';
 
-
 export const SideMenuWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: inherit;
   height: 96vh;
+  flex-basis: 16%;
+  width: 30%;
+  box-sizing: border-box;
   background-color: #0e1a35;
-`
-
+`;
 
 export const MenuItemsWrapper = styled.div`
-  display:flex;
-  flex-direction:column;
-  
+  display: flex;
+  flex-direction: column;
 
-`
+`;
 export const LogoAppWrapper = styled.div`
   display: flex;
   padding-bottom: 2rem;
@@ -23,5 +22,5 @@ export const LogoAppWrapper = styled.div`
   width: 11rem;
   justify-content: center;
   align-items: center;
-  padding-left:2rem;
-`
+  padding-left: 2rem;
+`;
