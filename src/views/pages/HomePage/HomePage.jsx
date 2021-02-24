@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import * as S from './style';
 import { SideMenu, TopMenu } from '../../../components/organsims';
 import { SideMenuContext } from '../../../contexts/sideMenu/sideMenuContext';
@@ -8,7 +8,7 @@ const HomePage = () => {
   const { open, setOpen } = useContext(SideMenuContext);
   return (
     <S.HomePageWrapper>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
         <SideMenu open={open} setOpen={setOpen} />
         <S.MainContainer>
           <TopMenu />
@@ -30,7 +30,7 @@ const HomePage = () => {
             })}
           </Switch>
         </S.MainContainer>
-      </BrowserRouter>
+      </Router>
     </S.HomePageWrapper>
   );
 };
