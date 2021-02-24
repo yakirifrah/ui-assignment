@@ -1,9 +1,9 @@
 import { HomeContainer } from '../containers';
 const routes = [
   {
-    path: '/',
-    name: 'Dashboard',
-    components: HomeContainer,
+    path: '/Home',
+    name: 'Home',
+    component: HomeContainer,
     exact: true,
   },
 ];

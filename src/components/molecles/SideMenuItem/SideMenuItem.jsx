@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Icon, Typography } from '../../atoms';
 // import { Link } from 'react-router-dom';
-import { SideMenuContext } from '../../../contexts/sideMenuContext';
+import { SideMenuContext } from '../../../contexts/sideMenu/sideMenuContext';
 import * as S from './style';
 
 const SideMenuItem = ({ label, icon, index, onClick, current }) => {

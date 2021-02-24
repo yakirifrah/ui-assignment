@@ -7,7 +7,6 @@ const Icon = ({ folder, name, ...rest }) => {
     setLoading(true);
     const importIcon = async () => {
       try {
-
         const { default: reactComp } = await import(
           `!!@svgr/webpack?-svgo,+titleProp,+ref!../../../assets/icons/${folder}/${name}.svg`
         );

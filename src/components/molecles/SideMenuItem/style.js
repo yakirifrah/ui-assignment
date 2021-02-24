@@ -11,8 +11,8 @@ export const SideMenuItemWrapper = styled(Link)`
 `;
 
 export const SideMenuItemContainer = styled.div`
-  &:hover{
-    background:#122143;
+  &:hover {
+    background: #122143;
   }
   display: flex;
   align-items: center;

@@ -13,7 +13,6 @@ export const SideMenuWrapper = styled.div`
 export const MenuItemsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
 `;
 export const LogoAppWrapper = styled.div`
   display: flex;

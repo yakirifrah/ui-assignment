@@ -19,7 +19,7 @@ const sideMenuRender = (currentIndex, setCurrentIndex) =>
   });
 
 const SideMenu = ({ open }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(-1);
   return (
     <S.SideMenuWrapper open={open}>
       <S.LogoAppWrapper>

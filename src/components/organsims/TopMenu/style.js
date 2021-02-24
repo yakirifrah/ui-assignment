@@ -1,11 +1,11 @@
 import styled from 'styled-components/macro';
 
 export const HeaderWrapper = styled.div`
-  position: fixed;
-  width: inherit;
+  position: inherit;
+  width: auto;
   padding: 9px;
-  border-bottom: 1px solid rgba(132,146,175,0.3);
-  border-right: 1px solid rgba(132,146,175,0.3);
+  border-bottom: 1px solid rgba(132, 146, 175, 0.3);
+  border-right: 1px solid rgba(132, 146, 175, 0.3);
   box-shadow: 0 5px 4px -6px #202124;
   z-index: 13;
   background-color: #ffffff;
