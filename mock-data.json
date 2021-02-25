@@ -1,0 +1,21 @@
+[
+  {
+    "name": "John",
+    "tasks": {
+      "delayTasks": {
+        "number": 2,
+        "listOfDelayTasks": [
+          { "content": "New website for Symu.co", "days": 5, "delay": true },
+          { "content": "Free Business PSD Template", "days": 2, "delay": true }
+        ]
+      },
+      "leftTasks": {
+        "number": 5,
+        "listOfLeftTasks": [
+          { "content": "New logo for JCD.pl", "days": 5, "delay": false },
+          { "content": "Free Icons Set vol.3", "days": 10, "delay": false }
+        ]
+      }
+    }
+  }
+]
