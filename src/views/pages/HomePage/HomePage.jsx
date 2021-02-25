@@ -14,15 +14,12 @@ const HomePage = () => {
           <TopMenu />
           <Switch>
             {routes.map((route, index) => {
-              console.log({ route });
-              console.log({ index });
               return (
                 <Route
                   key={index}
                   path={route.path}
                   exact={route.exact}
                   render={(props) => {
-                    console.log({ props });
                     return <route.component name={route.name} {...props} {...route.props} />;
                   }}
                 />

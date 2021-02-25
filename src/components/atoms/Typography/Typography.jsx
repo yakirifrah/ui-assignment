@@ -6,19 +6,23 @@ const Typography = {
       {children}
     </MatTypography>
   ),
-  SmallText: ({ children, color, variant }) => (
-    // variant will get `subtitle1` if its use in navbar and selected. `subtitle2` will use if not selected in navbar.
-    <MatTypography variant={variant} color={color}>
+  LargeText: ({ children, color }) => (
+    <MatTypography variant="h1" color={color}>
+      {children}
+    </MatTypography>
+  ),
+  HeaderTextForChart: ({ children, color }) => (
+    <MatTypography variant="h2" color={color}>
       {children}
     </MatTypography>
   ),
   MediumText: ({ children, color }) => (
-    <MatTypography variant="h5" color={color}>
+    <MatTypography variant="h3" color={color}>
       {children}
     </MatTypography>
   ),
-  LargeText: ({ children, color }) => (
-    <MatTypography variant="h6" color={color}>
+  SmallText: ({ children, color, variant }) => (
+    <MatTypography variant={variant} color={color}>
       {children}
     </MatTypography>
   ),

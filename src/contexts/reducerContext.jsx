@@ -28,7 +28,7 @@ export const fetchDataForHomeTab = (state, action) => {
     case FETCH_DATA_ERROR:
       return {
         loading: false,
-        data: {},
+        data: [],
         error: 'Something went wrong!',
       };
     default:

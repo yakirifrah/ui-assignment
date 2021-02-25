@@ -1,5 +1,6 @@
 import { HomeTabProvider } from './home/homeTabProvider';
 import { SideMenuProvider } from './sideMenu/sideMenuProvider';
+import { ThemeProvider } from './theme/themeProvider';
 const combineProviders = (providers) =>
   providers.reduce((Combined, Provider) => ({ children }) => (
     <Combined>
@@ -7,5 +8,5 @@ const combineProviders = (providers) =>
     </Combined>
   ));
 
-const Providers = combineProviders([SideMenuProvider, HomeTabProvider]);
+const Providers = combineProviders([ThemeProvider, SideMenuProvider, HomeTabProvider]);
 export default Providers;

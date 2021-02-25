@@ -4,7 +4,12 @@ export const fetchDataForHomeTab = () => async (dispatch) => {
     type: FETCH_DATA_LOADING,
   });
   try {
-    const res = await fetch('../../lib/mock-data.json');
+    const res = await fetch('https://api.mocki.io/v1/e0f9d338', {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      }
+    });
     const data = await res.json();
     dispatch({ type: FETCH_DATA_SUCCESS, payload: data });
   } catch (err) {

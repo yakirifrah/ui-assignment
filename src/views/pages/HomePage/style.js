@@ -4,7 +4,7 @@ export const HomePageWrapper = styled.div`
   display: flex;
   width: 90%;
   border: 1px solid black;
-  margin : 0 auto;
+  margin: 0 auto;
 `;
 export const MainContainer = styled.div`
   width: 80vw;
