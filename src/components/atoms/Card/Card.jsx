@@ -2,17 +2,25 @@ import { Card as MtCard, CardContent } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const Card = ({ children, ...restProps }) => {
-  const { width, height } = restProps;
-  const useStyles = makeStyles((theme) => ({
+  const { width, height, padding = null } = restProps;
+
+  const useStylesForMtCard = makeStyles(() => ({
     root: {
       width: `${width}%`,
-      height: `${height}vh`,
+      maxHeight: `${height}vh`,
+      padding: 0,
     },
   }));
-  const classes = useStyles();
+  const useStylesForCardContent = makeStyles(() => ({
+    root: {
+      padding: `${padding}`,
+    },
+  }));
+  const classesForMtCard = useStylesForMtCard();
+  const classesForCardContent = useStylesForCardContent();
   return (
-    <MtCard variant="outlined" className={classes.root}>
-      <CardContent>{children}</CardContent>
+    <MtCard variant="outlined" className={classesForMtCard.root}>
+      <CardContent classes={{ root: classesForCardContent.root }}>{children}</CardContent>
     </MtCard>
   );
 };

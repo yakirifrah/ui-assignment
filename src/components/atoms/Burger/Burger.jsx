@@ -7,11 +7,11 @@ const Burger = ({ open, setOpen }) => {
         className="arrow"
         style={{
           backgroundImage: `url(${arrow})`,
-          width: '7px',
-          height: '13px',
+          width: '0.4375rem',
+          height: '0.8125rem',
           backgroundPosition: 'center',
           backgroundRepeat: 'none',
-          marginRight: '8px',
+          marginRight: '0.5rem',
         }}
       />
       <S.WrapperBurger open={open} setOpen={() => setOpen(!open)}>

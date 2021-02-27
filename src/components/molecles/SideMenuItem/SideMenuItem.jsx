@@ -1,21 +1,17 @@
-import { useContext } from 'react';
 import { Icon, Typography } from '../../atoms';
-import { SideMenuContext } from '../../../contexts/sideMenu/sideMenuContext';
 import * as S from './style';
 
 const SideMenuItem = ({ label, icon, index, onClick, current }) => {
   const variant = current ? 'subtitle1' : 'subtitle2';
   const color = current ? '#ffffff' : '#C5C0E5';
-  const active = current;
-  const { open, setOpen } = useContext(SideMenuContext);
+
   return (
-    <S.SideMenuItemContainer active={active}>
+    <S.SideMenuItemContainer active={current}>
       <S.SideMenuItemWrapper
         color={color}
         to={`/${label}`}
         onClick={() => {
           onClick(index);
-          setOpen(!open);
         }}
       >
         <Icon name={icon} folder={'sideMenu'} />

@@ -30,7 +30,7 @@ const ListTask = ({ delayTasks = {}, leftTasks = {} }) => {
     }
   };
 
-  return <S.wrapperListTask>{renderTask()}</S.wrapperListTask>;
+  return <S.WrapperListTask>{renderTask()}</S.WrapperListTask>;
 };
 
 export default ListTask;

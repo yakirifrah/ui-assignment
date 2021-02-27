@@ -1,21 +1,71 @@
 [
   {
     "name": "John",
-    "tasks": {
-      "delayTasks": {
-        "number": 2,
-        "listOfDelayTasks": [
-          { "content": "New website for Symu.co", "days": 5, "delay": true },
-          { "content": "Free Business PSD Template", "days": 2, "delay": true }
-        ]
+    "all-data": {
+      "tasks": {
+        "leftTasks": {
+          "number": 5,
+          "listOfLeftTasks": [
+            {
+              "days": 5,
+              "delay": false,
+              "content": "New logo for JCD.pl"
+            },
+            {
+              "days": 10,
+              "delay": false,
+              "content": "Free Icons Set vol.3"
+            }
+          ]
+        },
+        "delayTasks": {
+          "number": 2,
+          "listOfDelayTasks": [
+            {
+              "days": 5,
+              "delay": true,
+              "content": "New website for Symu.co"
+            },
+            {
+              "days": 2,
+              "delay": true,
+              "content": "Free Business PSD Template"
+            }
+          ]
+        }
       },
-      "leftTasks": {
-        "number": 5,
-        "listOfLeftTasks": [
-          { "content": "New logo for JCD.pl", "days": 5, "delay": false },
-          { "content": "Free Icons Set vol.3", "days": 10, "delay": false }
-        ]
-      }
+      "messages": [
+        {
+          "name": "Nina Jones",
+          "content": "Hey You! It's me again:-) I attached new Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "time": "5 minutes ago"
+        },
+        {
+          "name": "Nina Jones",
+          "content": "Hey! I attached some new PSD files for Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "time": "About 20 hours ago"
+        },
+        {
+          "name": "James Smith",
+          "content": "Good morning, you are fired!",
+          "time": "2 days ago"
+        },
+        {
+          "name": "Nina Jones",
+          "content": "Hello! Could You bring me coffee please?",
+          "time": "About 2 weeks ago"
+        }
+      ],
+      "activities": [
+        { "name": "Nina Jones", "type": "added a new project", "content": "Free UI Kit", "time": "Just now" },
+        { "name": "James Smith", "type": "commented project", "content": "Free PSD Template" },
+        { "name": "Alex Clooney", "type": "completed task", "content": "Symu Website" },
+        {
+          "name": "Alexandra Spears",
+          "type": "added a new project",
+          "content": "Free PSD Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate "
+        }
+      ]
     }
   }
 ]

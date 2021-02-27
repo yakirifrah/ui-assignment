@@ -4,16 +4,15 @@ export const fetchDataForHomeTab = () => async (dispatch) => {
     type: FETCH_DATA_LOADING,
   });
   try {
-    const res = await fetch('https://api.mocki.io/v1/e0f9d338', {
+    const res = await fetch('https://603aa3faf1d6aa0017a10db0.mockapi.io/data', {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
-      }
+      },
     });
     const data = await res.json();
     dispatch({ type: FETCH_DATA_SUCCESS, payload: data });
   } catch (err) {
-    console.log({ err });
     dispatch({ type: FETCH_DATA_ERROR });
   }
 };

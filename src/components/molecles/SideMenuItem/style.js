@@ -17,9 +17,9 @@ export const SideMenuItemContainer = styled.div`
   display: flex;
   align-items: center;
   background-color: ${({ active }) => (active ? '#122143' : '')};
-  border-left: ${({ active }) => active && '11px  solid #5584FF'};
+  border-left: ${({ active }) => active && '0.6875rem  solid #5584FF'};
   opacity: ${({ active }) => active && 1};
-  //border-left:${(props) => props.border && '11px  solid #5584FF'};
+  //border-left:${(props) => props.border && '0.6875rem  solid #5584FF'};
   padding: 2rem;
   & > a {
     text-decoration: none;

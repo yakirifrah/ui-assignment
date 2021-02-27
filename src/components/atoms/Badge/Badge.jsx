@@ -6,24 +6,32 @@ const useStyles = makeStyles(() => ({
     backgroundColor: '#5584FF',
     color: '#FFFFFF',
   },
-  listPrimary: {
+  primaryList: {
     backgroundColor: '#5584FF',
     color: '#FFFFFF',
-    width: '45px',
-    height: '45px',
+    width: '2.8125rem',
+    height: '2.8125rem',
+    borderRadius: '50%',
+    fontSize: `1.5rem`,
+    fontWeight: `500`,
+    fontFamily: `"Roboto"`,
   },
   secondaryList: {
     backgroundColor: '#f83c7b',
     color: '#FFFFFF',
-    width: '45px',
-    height: '45px',
+    width: '2.8125rem',
+    height: '2.8125rem',
+    borderRadius: '50%',
+    fontSize: `1.5rem`,
+    fontWeight: `500`,
+    fontFamily: `"Roboto"`,
   },
 }));
 
-const Badge = ({ badgeContent, type, children }) => {
+const Badge = ({ badgeContent, type, children, restProps }) => {
   const classes = useStyles();
   return (
-    <MtBadge classes={{ badge: classes[`${type}`] }} badgeContent={badgeContent}>
+    <MtBadge classes={{ badge: classes[`${type}`] }} badgeContent={badgeContent} {...restProps}>
       {children}
     </MtBadge>
   );

@@ -4,7 +4,7 @@ export const SideMenuWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 96vh;
-  flex-basis: 16%;
+  flex-basis: 20%;
   width: 30%;
   box-sizing: border-box;
   background-color: #0e1a35;

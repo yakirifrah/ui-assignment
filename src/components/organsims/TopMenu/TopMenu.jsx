@@ -17,15 +17,15 @@ const TopMenu = () => {
           <Button label="Add project" />
           <Icon name="messages" folder="topMenu" />
           <Notification badgeContent={3} />
-          <Avatar AvatarName="Yakir" />
+          <Avatar.Image AvatarName="Yakir" size="medium" />
           <div
             style={{
               backgroundImage: `url(${arrowDown})`,
-              width: '7px',
-              height: '13px',
+              width: '0.4375rem',
+              height: '0.8125rem',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
-              marginLeft: '12px',
+              marginLeft: '0.75rem',
             }}
           />
         </S.ContainerGroup2>

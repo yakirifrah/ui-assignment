@@ -15,9 +15,9 @@ export const ContainerBurger = styled.div`
 export const WrapperBurger = styled.div`
   div {
     width: 2rem;
-    height: 5px;
+    height: 0.3125rem;
     background-color: #0e1a35;
-    margin: 6px 0;
+    margin: 0.375rem 0;
     cursor: pointer;
     z-index: 10;
   }

@@ -1,10 +1,11 @@
-import { useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { HomeTabContext } from '../../contexts/home/homeTabContext';
 import { fetchDataForHomeTab } from '../../contexts/home/homeTabAction';
-import { Typography, Card, Badge } from '../../components/atoms';
+import { Typography, Card, Loader } from '../../components/atoms';
 import { DropDown } from '../../components/molecles';
 import Chart from '../../assets/img/cart-donut.png';
 import ChratLine from '../../assets/img/chart-line.png';
+import ListContainer from '../ListContainer';
 import * as S from './style';
 
 const HomeContainer = () => {
@@ -14,8 +15,9 @@ const HomeContainer = () => {
     fetchDataForHomeTab()(dispatch);
   }, []);
 
-  return (
-    <S.HomeWrapper>
+  const renderHomeContent = () => {
+    const { tasks, messages,activities } = data[0]['all-data'];
+    return (
       <S.HomeContainer>
         <S.TitleWrapper>
           <Typography.LargeText>Hello {data[0]?.name}!</Typography.LargeText>
@@ -38,16 +40,21 @@ const HomeContainer = () => {
             </Card>
           </S.StripeCharts>
           <S.StripeLists>
-            <Card width={30} height={38}>
-              <S.HeaderListWrapper>
-                <Typography.MediumText>Tasks</Typography.MediumText>
-                {/*{ delayTasks?.listOfDelayTasks.length && <Badge type={'listPrimary'} badgeContent={listOfDelayTasks.length}/>}*/}
-                {/*{leftTasks?.listOfLeftTasks.length && <Badge type={'listSecondary'} badgeContent={listOfLeftTasks.length}/>}*/}
-              </S.HeaderListWrapper>
-            </Card>
+            {React.Children.toArray(
+              Object.keys(data[0]['all-data']).map((listName) => (
+                <ListContainer name={listName} tasks={tasks} messages={messages} activities={activities} />
+              ))
+            )}
           </S.StripeLists>
         </S.StripesContainer>
       </S.HomeContainer>
+    );
+  };
+
+  return (
+    <S.HomeWrapper>
+      {loading && <Loader />}
+      {!loading && !error.length && renderHomeContent()}
     </S.HomeWrapper>
   );
 };
