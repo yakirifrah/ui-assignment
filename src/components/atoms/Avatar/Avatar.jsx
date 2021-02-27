@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import profilePhoto from '../../../assets/icons/topMenu/profilePhoto.png';
 import James_Smith from '../../../assets/img/James Smith.png';
 import Nina_Johnson from '../../../assets/img/Nina Jones.png';
-import Alexandra_Spears  from '../../../assets/img/Alexandra Spears.png';
-import Alex_Clooney  from '../../../assets/img/Alex Clooney.png'
+import Alexandra_Spears from '../../../assets/img/Alexandra Spears.png';
+import Alex_Clooney from '../../../assets/img/Alex Clooney.png';
 
 const useStyles = makeStyles((theme) => ({
   medium: {
@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#F83C7B',
   },
   profilePhoto: {
-    width: '2.25rem',
-    height: '2.25rem',
+    width: '2.75rem',
+    height: '2.75rem',
   },
 }));
 
@@ -49,8 +49,8 @@ const Avatar = {
     const getSrc = () => {
       if (name === 'Nina Jones') return Nina_Johnson;
       if (name === 'James Smith') return James_Smith;
-      if (name==='Alexandra Spears') return Alexandra_Spears;
-      if (name==='Alex Clooney') return Alex_Clooney;
+      if (name === 'Alexandra Spears') return Alexandra_Spears;
+      if (name === 'Alex Clooney') return Alex_Clooney;
     };
     const classes = useStyles();
     return <MatAvatar alt={name} className={classes.profilePhoto} src={getSrc()} />;

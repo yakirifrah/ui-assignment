@@ -1,9 +1,9 @@
 import { Avatar, Card, Typography } from '../../components/atoms';
 import * as S from './style';
 import { Divider } from '@material-ui/core';
-import { ListTask, ListMessage ,ListActivity} from '../../components/organsims';
+import { ListTask, ListMessage, ListActivity } from '../../components/organsims';
 
-const ListContainer = ({ name, tasks, messages,activities }) => {
+const ListContainer = ({ name, tasks, messages, activities }) => {
   const renderContentList = (name) => {
     switch (name) {
       case 'tasks':
@@ -44,23 +44,21 @@ const ListContainer = ({ name, tasks, messages,activities }) => {
             <ListMessage messages={messages} />
           </>
         );
-        case 'activities':
-            return(
-                <>
-                    <S.HeaderListWrapper>
-                        <Typography.MediumText>{name}</Typography.MediumText>
-                        <S.NumberAvatarWrapper>
-                            <div className="left-task-badge">
-                                <Avatar.Number type="primary" num={'10'} />
-                            </div>
-                        </S.NumberAvatarWrapper>
-                    </S.HeaderListWrapper>
-                    <Divider />
-                    <ListActivity
-                        activities={activities}
-                    />
-                </>
-            )
+      case 'activities':
+        return (
+          <>
+            <S.HeaderListWrapper>
+              <Typography.MediumText>{name}</Typography.MediumText>
+              <S.NumberAvatarWrapper>
+                <div className="left-task-badge">
+                  <Avatar.Number type="primary" num={'10'} />
+                </div>
+              </S.NumberAvatarWrapper>
+            </S.HeaderListWrapper>
+            <Divider />
+            <ListActivity activities={activities} />
+          </>
+        );
       default:
         break;
     }

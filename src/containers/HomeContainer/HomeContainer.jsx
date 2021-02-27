@@ -16,7 +16,7 @@ const HomeContainer = () => {
   }, []);
 
   const renderHomeContent = () => {
-    const { tasks, messages,activities } = data[0]['all-data'];
+    const { tasks, messages, activities } = data[0]['all-data'];
     return (
       <S.HomeContainer>
         <S.TitleWrapper>
