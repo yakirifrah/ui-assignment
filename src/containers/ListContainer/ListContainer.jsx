@@ -65,7 +65,7 @@ const ListContainer = ({ name, tasks, messages, activities }) => {
   };
   return (
     <>
-      <Card width={30} height={38} padding={0}>
+      <Card width={30} height={45} padding={0}>
         {renderContentList(name)}
       </Card>
     </>

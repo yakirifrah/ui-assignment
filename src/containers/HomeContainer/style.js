@@ -18,7 +18,7 @@ export const HomeContainer = styled.div`
     max-width: 80%;
   }
   .line-chart {
-    width: 33.1875rem;
+    width: 28.1875rem;
     height: auto;
     margin-top: 8px;
     margin-left: 11px;

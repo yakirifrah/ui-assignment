@@ -24,14 +24,14 @@ const HomeContainer = () => {
         </S.TitleWrapper>
         <S.StripesContainer>
           <S.StripeCharts>
-            <Card width={40} height={33}>
+            <Card width={40} height={29}>
               <S.HeaderWrapper>
                 <Typography.HeaderTextForChart>Your Sales</Typography.HeaderTextForChart>
                 <DropDown />
               </S.HeaderWrapper>
               <img className="donut-cart" src={Chart} alt="chart" />
             </Card>
-            <Card width={50} height={33}>
+            <Card width={50} height={29}>
               <S.HeaderWrapper>
                 <Typography.HeaderTextForChart>Report</Typography.HeaderTextForChart>
                 <DropDown />
