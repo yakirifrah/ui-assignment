@@ -13,7 +13,7 @@ const HomeContainer = () => {
   const { data, loading, error } = state;
   useEffect(() => {
     fetchDataForHomeTab()(dispatch);
-  }, []);
+  }, [dispatch]);
 
   const renderHomeContent = () => {
     const { tasks, messages, activities } = data[0]['all-data'];
