@@ -22,7 +22,7 @@ const SideMenu = ({ open }) => {
   const [currentIndex, setCurrentIndex] = useState(-1);
   return (
     <S.SideMenuWrapper open={open}>
-      <S.LogoAppWrapper>
+      <S.LogoAppWrapper open={open}>
         <Icon name="logoApp" folder="app" />
       </S.LogoAppWrapper>
       <S.MenuItemsWrapper>{sideMenuRender(currentIndex, setCurrentIndex)}</S.MenuItemsWrapper>

@@ -1,8 +1,12 @@
 import arrow from '../../../assets/icons/topMenu/arrow.png';
+
 import * as S from './style';
-const Burger = ({ open, setOpen }) => {
-  return (
-    <S.ContainerBurger>
+import {useContext} from "react";
+import {SideMenuContext} from "../../../contexts/sideMenu/sideMenuContext";
+const Burger = ( ) => {
+    const { open,setOpen } = useContext(SideMenuContext);
+    return (
+    <S.ContainerBurger open={open} onClick={() => setOpen(!open)}>
       <div
         className="arrow"
         style={{
@@ -14,7 +18,7 @@ const Burger = ({ open, setOpen }) => {
           marginRight: '0.5rem',
         }}
       />
-      <S.WrapperBurger open={open} setOpen={() => setOpen(!open)}>
+      <S.WrapperBurger>
         <div />
         <div />
         <div />

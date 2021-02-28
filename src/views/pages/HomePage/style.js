@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled,{css} from 'styled-components/macro';
 
 export const HomePageWrapper = styled.div`
   display: flex;
@@ -12,4 +12,10 @@ export const MainContainer = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  ${props => props.open && css`
+   width: 100vw;
+  `}
+  
+  
+  
 `;

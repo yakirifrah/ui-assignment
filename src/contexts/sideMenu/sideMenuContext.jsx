@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 export const initialState = {
-  open: true,
+  open: false,
   setOpen: () => {},
 };
 export const SideMenuContext = createContext(initialState);

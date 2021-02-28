@@ -9,6 +9,7 @@ const Card = ({ children, ...restProps }) => {
       width: `${width}%`,
       maxHeight: `${height}vh`,
       padding: 0,
+      overflowY: 'auto',
     },
   }));
   const useStylesForCardContent = makeStyles(() => ({

@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled,{css} from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 export const SideMenuItemWrapper = styled(Link)`
   display: flex;
@@ -7,6 +7,9 @@ export const SideMenuItemWrapper = styled(Link)`
   & > h6 {
     color: ${({ color }) => color};
     margin-left: 1rem;
+    ${props => props.open && css`
+      margin-left: 2rem;
+  `}
   }
 `;
 
@@ -24,4 +27,7 @@ export const SideMenuItemContainer = styled.div`
   & > a {
     text-decoration: none;
   }
+  ${props => props.open && css`
+      padding-left:26px;
+  `}
 `;

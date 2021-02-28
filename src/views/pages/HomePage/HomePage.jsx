@@ -5,12 +5,12 @@ import { SideMenu, TopMenu } from '../../../components/organsims';
 import { SideMenuContext } from '../../../contexts/sideMenu/sideMenuContext';
 import routes from '../../../config/route';
 const HomePage = () => {
-  const { open, setOpen } = useContext(SideMenuContext);
+  const { open } = useContext(SideMenuContext);
   return (
     <S.HomePageWrapper>
       <Router basename={process.env.PUBLIC_URL}>
-        <SideMenu open={open} setOpen={setOpen} />
-        <S.MainContainer>
+        <SideMenu open={open}  />
+        <S.MainContainer open={open}>
           <TopMenu />
           <Switch>
             {routes.map((route, index) => {
