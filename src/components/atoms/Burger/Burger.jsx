@@ -1,11 +1,11 @@
 import arrow from '../../../assets/icons/topMenu/arrow.png';
 
 import * as S from './style';
-import {useContext} from "react";
-import {SideMenuContext} from "../../../contexts/sideMenu/sideMenuContext";
-const Burger = ( ) => {
-    const { open,setOpen } = useContext(SideMenuContext);
-    return (
+import { useContext } from 'react';
+import { SideMenuContext } from '../../../contexts/sideMenu/sideMenuContext';
+const Burger = () => {
+  const { open, setOpen } = useContext(SideMenuContext);
+  return (
     <S.ContainerBurger open={open} onClick={() => setOpen(!open)}>
       <div
         className="arrow"

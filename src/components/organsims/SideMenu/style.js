@@ -1,4 +1,4 @@
-import styled,{css} from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 
 export const SideMenuWrapper = styled.div`
   display: flex;
@@ -8,11 +8,12 @@ export const SideMenuWrapper = styled.div`
   width: 30%;
   box-sizing: border-box;
   background-color: #0e1a35;
-  ${props => props.open && css`
-    flex-basis:0;
-    width: 4%;
-    `
-  }
+  ${(props) =>
+    props.open &&
+    css`
+      flex-basis: 0;
+      width: 4%;
+    `}
 `;
 
 export const MenuItemsWrapper = styled.div`
@@ -27,9 +28,9 @@ export const LogoAppWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding-left: 2rem;
-  ${props => props.open && css`
-    padding-left: 8px;
-
-  `
-  }
+  ${(props) =>
+    props.open &&
+    css`
+      padding-left: 8px;
+    `}
 `;

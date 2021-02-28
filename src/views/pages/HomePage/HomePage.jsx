@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import * as S from './style';
 import { SideMenu, TopMenu } from '../../../components/organsims';
 import { SideMenuContext } from '../../../contexts/sideMenu/sideMenuContext';
@@ -9,10 +9,17 @@ const HomePage = () => {
   return (
     <S.HomePageWrapper>
       <Router basename={process.env.PUBLIC_URL}>
-        <SideMenu open={open}  />
+        <SideMenu open={open} />
         <S.MainContainer open={open}>
           <TopMenu />
           <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => {
+                return <Redirect to="/Home" />;
+              }}
+            />
             {routes.map((route, index) => {
               return (
                 <Route

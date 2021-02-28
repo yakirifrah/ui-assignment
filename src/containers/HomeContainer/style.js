@@ -4,7 +4,6 @@ export const HomeWrapper = styled.div`
   display: flex;
   height: -webkit-fill-available;
   background-color: #f6f7fa;
-
 `;
 
 export const HomeContainer = styled.div`
